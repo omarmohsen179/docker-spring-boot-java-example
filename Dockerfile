@@ -10,10 +10,11 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the built JAR file from the build stage to the container
-COPY --from=build /app/target/my-application.jar .
+COPY --from=build /app/target/*.jar ./my-application.jar
 
 # Set the command to run the application
 CMD ["java", "-jar", "my-application.jar"]
+
 
 # docker ps // show all images
 # docker build -t spring-boot:1.0 . // build imagedocker
