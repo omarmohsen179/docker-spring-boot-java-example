@@ -13,7 +13,7 @@ public class AssessmentController {
 
     @GetMapping("/all")
     public ResponseEntity<String> getAllAssessments() {
-        return new ResponseEntity<>("works 0102", HttpStatus.OK);
+        return new ResponseEntity<>("works 0103", HttpStatus.OK);
     }
 
 }
