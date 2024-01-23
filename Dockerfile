@@ -1,4 +1,5 @@
 # Stage 1: Build the application using Maven
+#https://medium.com/@ramanamuttana/build-a-docker-image-using-maven-and-spring-boot-418e24c00776 source
 FROM maven:3.8.4-openjdk-11-slim AS build
 WORKDIR /app
 COPY pom.xml .
