@@ -15,7 +15,7 @@ COPY --from=build /app/target/*.jar ./my-application.jar
 
 # Set the command to run the application
 CMD ["java", "-jar", "my-application.jar"]
-
+#ENTRYPOINT ["java", "-cp", "/app/resources:/app/classes:/app/libs/*", "com.cubic.fareengine.integrationtests.FareEngineIntegrationTestsApplication"]
 
 # docker ps // show all images
 # docker build -t spring-boot:1.0 . // build imagedocker
@@ -24,3 +24,11 @@ CMD ["java", "-jar", "my-application.jar"]
 # docker start [containerId] // start image
 # docker rmi [imageName] -f
 #docker system prune -a
+
+
+#FROM openjdk:jre-alpine
+ #LABEL maintainer=900997
+ #WORKDIR /app
+ #COPY libs libs/
+ #COPY resources resources/
+ #COPY classes classes/
